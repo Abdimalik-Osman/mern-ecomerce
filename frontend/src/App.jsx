@@ -19,7 +19,7 @@ function App() {
     price:0,
     countInStock:0
    });
-   console.log(product.name)
+  //  console.log(product.name)
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const { products, isError, isSuccess, isLoading, message } = useSelector(
@@ -62,7 +62,7 @@ function App() {
         <Modal.Title>Modal heading</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Form onSubmit={handleSubmit}>
+        <Form>
           <Form.Group className="mb-3" controlId="description">
             <Form.Label>Product Name</Form.Label>
             <Form.Control
@@ -121,7 +121,7 @@ function App() {
         <Button variant="secondary" onClick={handleClose}>
           Close
         </Button>
-        <Button type="submit" variant="primary" onClick={handleClose}>
+        <Button variant="primary" onClick={handleSubmit}>
           Save Changes
         </Button>
       </Modal.Footer>
